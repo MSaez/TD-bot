@@ -7,7 +7,7 @@ client.once("ready", () => {
     setInterval(() => {
         var hora = moment.utc().subtract(7, 'h').format("HH:mm:ss")
         var day = moment.utc().subtract(7, 'h').format("D")
-        if(hora === parseInt(day) == 17){
+        if(hora === '12:00:00' && parseInt(day) == 1){
             const channel = client.channels.cache.find(channel => channel.name === 'notificaciones-y-alertas')
             const embed = new Discord.MessageEmbed()
             .setTitle('Información')
